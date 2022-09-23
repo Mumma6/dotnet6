@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace project.Models
+namespace project.DTOs
 {
-    public class Character
+    public class GetCharacterDto
     {
         public int Id { get; set; }
 

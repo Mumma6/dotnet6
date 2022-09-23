@@ -25,3 +25,5 @@ C:\Users\marti\OneDrive\Skrivbord\kurser\dotnet6\project\obj\Debug\net6.0\refint
 C:\Users\marti\OneDrive\Skrivbord\kurser\dotnet6\project\obj\Debug\net6.0\project.pdb
 C:\Users\marti\OneDrive\Skrivbord\kurser\dotnet6\project\obj\Debug\net6.0\project.genruntimeconfig.cache
 C:\Users\marti\OneDrive\Skrivbord\kurser\dotnet6\project\obj\Debug\net6.0\ref\project.dll
+C:\Users\marti\OneDrive\Skrivbord\kurser\dotnet6\project\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\marti\OneDrive\Skrivbord\kurser\dotnet6\project\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

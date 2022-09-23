@@ -3,12 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace project.Models
+namespace project.DTOs
 {
-    public class Character
+    public class AddCharacterDto
     {
-        public int Id { get; set; }
-
         public string Name { get; set; } = "Frodo";
 
         public int HitPoints { get; set; } = 100;
