@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace project.Models
+namespace project.DTOs
 {
-    public class Character
+    public class UpdateCharacterDto
     {
         public int Id { get; set; }
 
@@ -20,7 +20,5 @@ namespace project.Models
         public int Intelligence { get; set; } = 10;
 
         public RpgClass Class { get; set; } = RpgClass.Knight;
-
-        public User? User { get; set; }
     }
 }

@@ -37,5 +37,30 @@ namespace project.Controllers
         {
             return Ok(await _characterService.AddCharacter(data));
         }
+
+        [HttpPut]
+        public async Task<ActionResult<ServiceResponse<GetCharacterDto>>> UpdateChar(UpdateCharacterDto data)
+        {
+            var response = await _characterService.UpdateCharacter(data);
+
+            if (response.Data == null)
+            {
+                return NotFound(response);
+            }
+            return Ok(response);
+        }
+
+        [HttpDelete("{id}")] // via URL
+        public async Task<ActionResult<ServiceResponse<List<GetCharacterDto>>>> Delete(int id)
+        {
+            var response = await _characterService.DeleteCharacter(id);
+
+            if (response.Data == null)
+            {
+                return NotFound(response);
+            }
+            return Ok(response);
+        }
+
     }
 }
