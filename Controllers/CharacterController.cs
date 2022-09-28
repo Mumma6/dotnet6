@@ -6,9 +6,12 @@ using Microsoft.AspNetCore.Mvc;
 using project.Services;
 using project.Models;
 using project.DTOs;
+using Microsoft.AspNetCore.Authorization;
+using System.Security.Claims;
 
 namespace project.Controllers
 {
+    [Authorize] // enable auth. Need to add token to header.
     [ApiController]
     [Route("api/[controller]")]
     public class CharacterController : ControllerBase
@@ -20,10 +23,12 @@ namespace project.Controllers
             _characterService = characterService;
         }
 
+        // [AllowAnonymous] // tar bort auth
         [HttpGet("GetAll")] // same as using both HttpGet and Route
         public async Task<ActionResult<ServiceResponse<List<GetCharacterDto>>>> Get()
         {
-            return Ok(await _characterService.GetAllCharacters());
+            int userId = int.Parse(User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier).Value);
+            return Ok(await _characterService.GetAllCharacters(userId));
         }
 
         [HttpGet("{id}")] // via URL
